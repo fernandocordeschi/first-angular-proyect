@@ -15,8 +15,10 @@ Este servicio busca ser **innovador, eficiente y de calidad** para todos los usu
 
 ## 👨‍💻 Datos del desarrollador
 
-- **Nombre y Apellido:** Fernando Martín Cordeschi  
+- **Nombre y Apellido:** Fernando Martín Cordeschi
+- **DNI:** 29555240 
 - **Email:** fernandocordeschi@hotmail.com
+- **Sede** TANDIL
 
 ---
 
