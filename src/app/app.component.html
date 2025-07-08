@@ -1,0 +1,45 @@
+<!-- Barra de navegación con Bootstrap -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <!-- Título dinámico con interpolación -->
+    <h1 class="navbar-brand" href="#">{{ title1 }}</h1>
+
+    <!-- Botón para mostrar/ocultar menú en pantallas chicas -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido del navbar colapsable -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Enlaces a las rutas del proyecto -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">Contacto</a>
+        </li>
+
+        <!-- Dropdown comentado (sin usar) -->
+        <!--<li class="nav-item dropdown">...</li>-->
+      </ul>
+
+      <!-- Input y botón de búsqueda -->
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Busqueda</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+<!-- Acá se renderizan las rutas -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Footer simple -->
+<footer class="footer">
+  <p>Vendedores Ambulantes al alcance de un click!!!!</p>
+</footer>

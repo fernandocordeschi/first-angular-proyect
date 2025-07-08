@@ -1,0 +1,56 @@
+/* Fuente espeluznante desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Estilo rojo con sombra y animación para textos "tenebrosos" */
+.tenebroso {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.5rem;
+  color: #ff0000;
+  text-shadow: 1px 1px 3px #000, 0 0 6px #800000;
+  animation: parpadeo 1.2s infinite alternate;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+/* Hace que el texto parpadee y se agrande un poco */
+@keyframes parpadeo {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+/* Efecto de aparición con zoom y parpadeo */
+.aparicion-tenebrosa {
+  display: inline-block;
+  animation: zoomYParpadeo 2s ease-out forwards;
+  transform-origin: center;
+  opacity: 0;
+  color: #ff0000;
+  text-shadow: 0 0 5px #000, 0 0 10px #900, 0 0 20px #400;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* Animación con zoom, brillo y opacidad */
+@keyframes zoomYParpadeo {
+  0% {
+    transform: scale(0.6) rotate(-2deg);
+    opacity: 0;
+    filter: brightness(50%);
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.8;
+    filter: brightness(130%);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: brightness(100%);
+  }
+}

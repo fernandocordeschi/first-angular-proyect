@@ -1,0 +1,64 @@
+<!-- Contenedor general: productos y carrito lado a lado -->
+<div class="products-cart-wrapper">
+  <!-- Sección izquierda: lista de productos -->
+  <div class="productos-section">
+    <h1>Lista de productos</h1>
+
+    <table class="table table-fixed">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Tipo de producto</th>
+          <th>Material</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Compra</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of products; track product.name; let i = $index) {
+          <tr>
+            <td>
+              <img class="img-thumbnail" [src]="product.image" [alt]="product.name" role="presentation" width="80" />
+            </td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.type }}</td>
+            <td>{{ product.price | currency:'ARS':'symbol-narrow' }}</td>
+
+            @if (product.stock > 0) {
+              <td>{{ product.stock }}</td>
+              <td>
+                <div class="compra-container">
+                  <app-vucumpra-button-input
+                    [(quantity)]="product.quantity"
+                    [max]="product.stock"
+                    (quantityChange)="product.quantity = $event">
+                  </app-vucumpra-button-input>
+
+                  <button class="btn btn-primary" (click)="addToCart(product)">
+                    Agregar a CarListo
+                  </button>
+
+                  <button class="btn btn-danger eliminar-btn ms-2" (click)="deleteProduct(product.id)">
+                    🗑️ Eliminar producto
+                  </button>
+                </div>
+              </td>
+            } @else {
+              <td colspan="2">
+                <span class="badge badge-warning">SIN STOCK</span>
+              </td>
+            }
+          </tr>
+        }
+
+        @empty {
+          <tr>
+            <td colspan="6">No hay productos para mostrar.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+</div>

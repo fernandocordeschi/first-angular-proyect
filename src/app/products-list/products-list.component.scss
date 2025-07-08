@@ -1,0 +1,31 @@
+h1 {
+  color: blue;
+}
+
+.clearance {
+  border: 8px solid green;
+  background: lightgreen;
+}
+
+.compra-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cantidad-input {
+  width: 60px;
+  text-align: center;
+}
+
+.eliminar-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

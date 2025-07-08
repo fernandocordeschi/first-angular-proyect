@@ -1,0 +1,26 @@
+<div class="input-wrapper">
+  <button
+    class="btn btn-primary cantidad-btn"
+    (click)="decreaseQuantity()"
+    [disabled]="quantity <= 0"
+    aria-label="Disminuir cantidad"
+    title="Disminuir cantidad">
+    -
+  </button>
+
+  <input
+    type="text"
+    [ngModel]="quantity"
+    (ngModelChange)="onModelChange($event)"
+    class="cantidad-input"
+    aria-label="Cantidad del producto" />
+
+  <button
+    class="btn btn-primary cantidad-btn"
+    (click)="increaseQuantity()"
+    [disabled]="quantity >= max || max === 0"
+    aria-label="Aumentar cantidad"
+    title="Aumentar cantidad">
+    +
+  </button>
+</div>

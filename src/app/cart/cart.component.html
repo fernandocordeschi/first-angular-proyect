@@ -1,0 +1,23 @@
+<h3>{{ title }}</h3>
+
+<p>
+  <!-- Botón para vaciar el carrito -->
+ <button class="btn btn-warning" (click)="clearCart()">Limpiar a CarListo</button>
+
+</p>
+
+<ul>
+  <!-- Recorre los productos del carrito -->
+  <li *ngFor="let b of cartList$ | async">
+    {{ b.name }} — {{ b.quantity }} x {{ b.price | currency }} =
+    {{ b.quantity * b.price | currency }}
+  </li>
+</ul>
+
+<hr />
+
+<p>
+  <!-- Muestra el total del carrito -->
+  <strong>Total:</strong>
+  {{ totalPrice$ | async | currency }}
+</p>

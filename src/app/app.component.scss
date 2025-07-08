@@ -1,0 +1,11 @@
+footer {
+  background-color: #000;     /* fondo negro */
+  color: #fff;                /* letras blancas */
+  text-align: center;         /* texto centrado */
+  padding: 1rem 0;            /* espacio arriba y abajo */
+  position: fixed;            /* lo fija al fondo */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}

@@ -1,0 +1,31 @@
+:host {
+  display: inline-block;
+  max-width: 120px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Botones de + y - */
+.cantidad-btn {
+  padding: 4px 10px;
+  font-size: 16px;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input de cantidad */
+.cantidad-input {
+  width: 35px;
+  text-align: center;
+  padding: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
